@@ -1,0 +1,14 @@
+{{yield}}
+{{#if formShowing}}
+  <form class="form-group">
+    <label for="new-category">Add a Category</label>
+    {{input value=category}}
+    <br>
+    <label for="new-location">Add Location</label>
+    {{input value=location}}
+    <br>
+    <button {{ action 'createCategory' }} >Confirm</button>
+  </form>
+  {{ else }}
+    <button {{action 'showForm'}}>Add a new category</button>
+{{/if}}
