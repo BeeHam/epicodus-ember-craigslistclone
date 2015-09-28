@@ -1,0 +1,20 @@
+{{yield}}
+{{#if formShowing}}
+  <form class="form-group">
+    <label for="title">Title:</label>
+    {{input value=title}}
+    <br>
+    <label for="date">Date:</label>
+    {{input value=date}}
+    <br>
+    <label for="email">Email:</label>
+    {{input value=email}}
+    <br>
+    <label for="details">Details:</label>
+    {{input value=details}}
+    <br>
+  <button {{ action 'createListing' category }}>Create Listing</button>
+  </form>
+  {{else}}
+  <button {{action 'showForm'}}>Add</button>
+{{/if}}

@@ -1,3 +1,12 @@
 {{outlet}}
 <p>Now showing ads for the section:</p>
-<h3>{{model.section}} in  {{model.location}}</h3>
+<h3>{{model.category.section}} in  {{model.category.location}}</h3>
+
+<h4>Current Listings:</h4>
+<!-- listings needs to be plural in this one-to-many relationship -->
+{{#each model.category.listings as |listing|}}
+  {{listing-info-tile listing=listing}}
+{{/each}}
+
+<h5>Add a new listing:</h5>
+{{ listing-new-tile createListing='createListing' category=model.category}}

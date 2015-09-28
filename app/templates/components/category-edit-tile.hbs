@@ -10,6 +10,6 @@
     <button {{ action 'editCategory' category }} >Confirm</button>
   </form>
   {{ else }}
-    <span class="clickable" {{action 'showForm'}}>Edit Category</span>
+    <span class="clickable" {{action 'showForm'}}>Edit /</span>
 {{/if}}
-<span class="text-danger deletable" {{action 'destroyCategory' category}} >x</span>
+<span class="text-danger deletable" {{action 'destroyCategory' category}} > / Delete</span>
