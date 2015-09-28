@@ -15,6 +15,17 @@ export default Ember.Route.extend({
       });
       category.save();
       this.transitionTo('category');
+    },
+
+    createCategory(params) {
+      var newCategory = this.store.createRecord('category', params);
+      newCategory.save();
+      this.transitionTo('admin');
+    },
+
+    destroyCategory(category) {
+      category.destroyRecord();
+      this.transitionTo('admin');
     }
   }
 });

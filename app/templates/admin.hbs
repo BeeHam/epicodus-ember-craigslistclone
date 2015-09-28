@@ -1,7 +1,7 @@
 {{outlet}}
-
+{{ category-new-tile category=category createCategory='createCategory'}}
 <ul>
   {{#each model as |category|}}
-    <li>{{category-info-tile category=category}} {{ category-edit-tile category=category editCategory='editCategory' }}</li>
+    {{category-info-tile category=category destroyCategory='destroyCategory'}} {{ category-edit-tile category=category editCategory='editCategory' }}
   {{/each}}
 </ul>
