@@ -1,0 +1,7 @@
+{{outlet}}
+
+<ul>
+  {{#each model as |category|}}
+    <li>{{category-info-tile category=category}} {{ category-edit-tile category=category editCategory='editCategory' }}</li>
+  {{/each}}
+</ul>

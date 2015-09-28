@@ -2,13 +2,19 @@
 {{#if formShowing}}
   <form class="form-group">
     <label for="edit-section">edit category</label>
-    {{input value=section}}
+    {{input value=section placeholder=category.section}}
     <br>
     <label for="edit-location">edit Location</label>
-    {{input value=location}}
+    {{input value=location placeholder=category.location}}
     <br>
     <button {{ action 'editCategory' category }} >Confirm</button>
   </form>
+
+  <!-- test -->
+
+  {{#if category}}
+  {{category}}
+  {{/if}}
   {{ else }}
     <button {{action 'showForm'}}>Edit Category</button>
 {{/if}}
