@@ -9,12 +9,7 @@
     <br>
     <button {{ action 'editCategory' category }} >Confirm</button>
   </form>
-
-  <!-- test -->
-
-  {{#if category}}
-  {{category}}
-  {{/if}}
   {{ else }}
-    <button {{action 'showForm'}}>Edit Category</button>
+    <span class="clickable" {{action 'showForm'}}>Edit Category</span>
 {{/if}}
+<span class="text-danger deletable" {{action 'destroyCategory' category}} >x</span>

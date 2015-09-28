@@ -16,6 +16,12 @@ export default Ember.Component.extend({
 
       this.sendAction('editCategory', category, params);
       this.set('formShowing', false);
+    },
+
+    destroyCategory(category) {
+      if(confirm('Whoa! Are you sure?')) {
+        this.sendAction('destroyCategory', category);
+      }
     }
   }
 
