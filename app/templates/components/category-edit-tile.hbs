@@ -1,0 +1,14 @@
+
+{{#if formShowing}}
+  <form class="form-group">
+    <label for="edit-section">edit category</label>
+    {{input value=section}}
+    <br>
+    <label for="edit-location">edit Location</label>
+    {{input value=location}}
+    <br>
+    <button {{ action 'editCategory' category }} >Confirm</button>
+  </form>
+  {{ else }}
+    <button {{action 'showForm'}}>Edit Category</button>
+{{/if}}

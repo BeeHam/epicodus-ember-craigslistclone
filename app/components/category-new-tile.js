@@ -8,9 +8,9 @@ export default Ember.Component.extend({
       this.set('formShowing', true)
     },
     createCategory() {
-      
+
       var params = {
-        category: this.get('category'),
+        section: this.get('section'),
         location: this.get('location')
       }
 
