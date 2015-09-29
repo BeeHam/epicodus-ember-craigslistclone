@@ -7,7 +7,7 @@
     <label for="new-location">Add Location</label>
     {{input value=location}}
     <br>
-    <button {{ action 'createCategory' }} >Confirm</button>
+    <button {{ action 'createCategory' }} class='btn btn-default'>Confirm</button>
   </form>
   {{ else }}
     <button {{action 'showForm'}} class='btn btn-default'>Add a new category</button>

@@ -7,7 +7,7 @@
     <label for="edit-location">edit Location</label>
     {{input value=location placeholder=category.location}}
     <br>
-    <button {{ action 'editCategory' category }} >Confirm</button>
+    <button {{ action 'editCategory' category }} class='btn btn-default'>Confirm</button>
   </form>
   {{ else }}
     <span class="clickable" {{action 'showForm'}}>Edit /</span>

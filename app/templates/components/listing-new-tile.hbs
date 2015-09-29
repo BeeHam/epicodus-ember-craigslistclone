@@ -13,8 +13,8 @@
     <label for="details">Details:</label>
     {{input value=details}}
     <br>
-  <button {{ action 'createListing' category }}>Create Listing</button>
+  <button {{ action 'createListing' category class='btn btn-default'}}>Create Listing</button>
   </form>
   {{else}}
-  <button {{action 'showForm'}}>Add</button>
+  <button {{action 'showForm'}} class='btn btn-default'>Add</button>
 {{/if}}
