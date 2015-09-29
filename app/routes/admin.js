@@ -23,9 +23,29 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
 
+    // destroyCategory(category) {
+    //   var listing_deletions = category.get('listings').map(function(listing) {
+    //     return listing.destroyRecord();
+    //   });
+    //   Ember.RSVP.all(listing_deletions).then(function() {
+    //     return category.destroyRecord();
+    //   })
+    //   this.transitionTo('admin');
+    // }
+// slow wifi could break code for destroy parents and children
     destroyCategory(category) {
+      category.get('listings').then(function(listings) {
+        listings.forEach(function(listing) {
+          listing.destroyRecord();
+        });
+      });
       category.destroyRecord();
       this.transitionTo('admin');
+
+    // destroyCategory(category) {
+    //   category.destroyRecord();
+    //   this.transitionTo('admin');
+    // }
     }
   }
 });

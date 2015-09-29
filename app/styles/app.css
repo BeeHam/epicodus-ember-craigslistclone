@@ -14,3 +14,29 @@
 .deletable:hover {
   text-decoration: underline;
 }
+
+.blue-link {
+  color: #FFF;
+}
+
+.blue-link:hover {
+  color: #FFF;
+}
+
+/*#category-list {
+  margin: 2rem;
+  background-color: lightgrey;
+  border: 2px solid white;
+  box-sizing: border-box;
+}*/
+
+.content {
+  border-radius: 5px;
+  background-color: #1D1E2C;
+  margin-bottom: 2rem;
+  padding: 1rem 2em;
+}
+
+body {
+  background-color: #CFCFCF;
+}

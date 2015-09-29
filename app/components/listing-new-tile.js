@@ -13,7 +13,8 @@ export default Ember.Component.extend({
         date: this.get('date'),
         email: this.get('email'),
         details: this.get('details'),
-        category: category
+        category: category,
+        dateAdded: Date.now()
       }
 
       this.sendAction('createListing', category, params);

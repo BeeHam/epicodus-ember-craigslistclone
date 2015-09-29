@@ -5,5 +5,6 @@ export default DS.Model.extend({
   date: DS.attr(),
   email: DS.attr(),
   details: DS.attr(),
-  category: DS.belongsTo('category', {async: true})
+  category: DS.belongsTo('category', {async: true}),
+  dateAdded: DS.attr()
 });
