@@ -1,6 +1,8 @@
-
+<div class="jumbotron">
+  <h5>the current date is {{current-date}}</h5>
+</div>
 <ul>
   {{#each model as |category|}}
-    <li>{{#link-to 'category' category.id}}{{category-info-tile category=category}} {{/link-to}}</li>
+    {{category-info-tile category=category listing=listing}}
   {{/each}}
 </ul>
